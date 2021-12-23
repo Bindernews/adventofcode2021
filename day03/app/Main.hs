@@ -1,6 +1,12 @@
 module Main where
 
-import Lib
+import System.Environment
+import Control.Monad
+import Data.List (transpose)
 
 main :: IO ()
-main = someFunc
+main = do
+    contents <- getContents 
+    let cols = transpose $ lines contents
+    print $ head cols
+
