@@ -61,4 +61,3 @@ main = do
     let lines' = lines contents
     part1 lines'
     part2 lines'
-
